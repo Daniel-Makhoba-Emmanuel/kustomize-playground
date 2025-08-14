@@ -52,6 +52,23 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Kustomize tutorial specific colors
+				code: {
+					DEFAULT: 'hsl(var(--code-background))',
+					foreground: 'hsl(var(--code-foreground))'
+				},
+				terminal: {
+					DEFAULT: 'hsl(var(--terminal-background))',
+					foreground: 'hsl(var(--terminal-foreground))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
