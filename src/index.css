@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    /* Light theme as default - Minimalist white background with black text */
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    /* Star Wars theme - Space background with light text */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
     /* Cards and surfaces */
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 240 8% 6%;
+    --card-foreground: 0 0% 98%;
 
     /* Code and terminal styling */
-    --code: 0 0% 98%;
-    --code-foreground: 240 10% 10%;
-    --terminal: 0 0% 96%;
-    --terminal-foreground: 120 100% 25%;
+    --code: 240 10% 8%;
+    --code-foreground: 240 5% 88%;
+    --terminal: 240 10% 6%;
+    --terminal-foreground: 120 100% 85%;
 
     /* Interactive elements */
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 240 8% 6%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 240 10% 3.9%;
     --primary-foreground: 0 0% 98%;
@@ -163,5 +163,103 @@
     -webkit-text-fill-color: transparent;
     text-shadow: none;
     pointer-events: none;
+  }
+
+  /* Star Wars Theme Styles */
+  .bg-space {
+    background: radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f23 50%, #000000 100%);
+    position: relative;
+  }
+
+  .bg-space::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, white, transparent),
+      radial-gradient(2px 2px at 40px 70px, white, transparent),
+      radial-gradient(1px 1px at 90px 40px, white, transparent),
+      radial-gradient(1px 1px at 130px 80px, white, transparent),
+      radial-gradient(2px 2px at 160px 30px, white, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: starfield 20s linear infinite;
+    opacity: 0.6;
+  }
+
+  @keyframes starfield {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
+  }
+
+  /* Star Wars 3D Text */
+  .text-starwars {
+    font-family: 'Arial Black', Arial, sans-serif;
+    color: #ffe81f;
+    text-shadow: 
+      0 1px 0 #ccc,
+      0 2px 0 #c9c9c9,
+      0 3px 0 #bbb,
+      0 4px 0 #b9b9b9,
+      0 5px 0 #aaa,
+      0 6px 1px rgba(0,0,0,.1),
+      0 0 5px rgba(255, 232, 31, 0.5),
+      0 1px 3px rgba(0,0,0,.3),
+      0 3px 5px rgba(0,0,0,.2),
+      0 5px 10px rgba(0,0,0,.25),
+      0 10px 10px rgba(0,0,0,.2),
+      0 20px 20px rgba(0,0,0,.15);
+    transform: perspective(500px) rotateX(25deg);
+    position: relative;
+  }
+
+  .text-starwars::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: rgba(255, 232, 31, 0.3);
+    transform: perspective(500px) rotateX(-25deg) scaleY(-1);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 232, 31, 0.3) 0%,
+      transparent 70%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    pointer-events: none;
+  }
+
+  /* Glow effect for text */
+  .glow-text {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 
+        0 0 5px currentColor,
+        0 0 10px currentColor,
+        0 0 15px currentColor,
+        0 0 20px currentColor;
+    }
+    to {
+      text-shadow: 
+        0 0 10px currentColor,
+        0 0 20px currentColor,
+        0 0 30px currentColor,
+        0 0 40px currentColor;
+    }
   }
 }
