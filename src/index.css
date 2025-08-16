@@ -6,50 +6,50 @@
 
 @layer base {
   :root {
-    /* Dark theme as default - Minimalist black and white */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    /* Light theme as default - Minimalist white background with black text */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
     /* Cards and surfaces */
-    --card: 240 8% 6%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
     /* Code and terminal styling */
-    --code: 240 10% 8%;
-    --code-foreground: 240 5% 88%;
-    --terminal: 240 10% 6%;
-    --terminal-foreground: 120 100% 85%;
+    --code: 0 0% 98%;
+    --code-foreground: 240 10% 10%;
+    --terminal: 0 0% 96%;
+    --terminal-foreground: 120 100% 25%;
 
     /* Interactive elements */
-    --popover: 240 8% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 240 10% 3.9%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
     /* Status colors */
-    --success: 120 100% 50%;
-    --success-foreground: 0 0% 8%;
+    --success: 120 100% 25%;
+    --success-foreground: 0 0% 98%;
     
-    --warning: 60 100% 50%;
-    --warning-foreground: 0 0% 8%;
+    --warning: 60 100% 30%;
+    --warning-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
     /* Borders and inputs */
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
 
     --radius: 0.5rem;
   }
